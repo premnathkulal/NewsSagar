@@ -1,15 +1,16 @@
-import React from 'react';
-import { View, Text } from 'react-native';
+import React, { Component } from 'react';
+import Main from './components/MainComponent'
+import SplashScreen from 'react-native-splash-screen'
 
-
-const App = () => {
-  return (
-    <View>
-      <Text>
-        Hello World
-      </Text>
-    </View>
-  );
+class App extends Component {
+  componentDidMount(){
+    SplashScreen.hide();
+  }
+  render(){
+    return (
+      <Main />
+    );
+  }
 };
 
 export default App;
